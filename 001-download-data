@@ -9,4 +9,6 @@ wget https://raw.github.com/alevchuk/finding-the-sequence-of-a-domain/master/my.
 
 # Latest Pfam A
 wget ftp://ftp.sanger.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
-gzip -d Pfam-A.hmm.gz
+
+echo "Decompressing..."
+gzip --verbose --decompress Pfam-A.hmm.gz
