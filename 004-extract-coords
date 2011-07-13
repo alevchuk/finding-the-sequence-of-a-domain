@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Fail on unbound variables. E.g. when arguents are not given
+set -u
+
+# Takes 1 argument - the found domains tab file
+found_domains=$1                                    
+
 # Extract the start and stop position from found-domains.tab
 # Result columns: 
 #    Domain Name,
@@ -7,5 +13,8 @@
 #    Sequence Accession,
 #    Start Position (ali coord from)
 #    Stop Position (ali coord to)
-cat found-domains.tab | grep -v "^#" | \
-sed 's/  */\t/g'  | cut -f 1,2,4,18,19
+cat $found_domains | grep -v "^#" | \
+sed 's/  */\t/g'  | cut -f 1,2,4,18,19 > $found_domains-extract.tab
+
+# In addtion to saving the file, print it out
+cat $found_domains-extract.tab

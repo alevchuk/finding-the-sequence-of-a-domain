@@ -1,4 +1,10 @@
 #!/bin/bash
 
+# Fail on unbound variables. E.g. when arguents are not given
+set -u
+
+# Takes 1 argument - the input FASTA file
+fasta_in=$1
+
 # Scan domains with HMMR 3
-hmmscan-3.0 --domtblout found-domains.tab Pfam-A.hmm  my.fasta
+hmmscan-3.0 --domtblout $fasta_in-found-domains.tab Pfam-A.hmm  $fasta_in

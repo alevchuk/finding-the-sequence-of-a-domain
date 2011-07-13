@@ -7,10 +7,12 @@ cat("--------- Loading Biostrings done ---------\n")
 # Parse arguments
 script_args <- commandArgs(trailingOnly=T)
 fasta_file_name <- script_args[[1]]
-coords_file_name <- script_args[[2]]
+coords_file_name <- paste(fasta_file_name, "-found-domains.tab-extract.tab",
+                          sep="")
+
 
 # Load data
-aa_set <- read.AAStringSet(fasta_file_name)
+aa_set <- read.AAStringSet(fasta_file_name, "fasta")
 coords <- read.table(coords_file_name)
 names(coords) <- c("domname", "domacc", "seqacc", "start", "end")
 
@@ -26,7 +28,9 @@ opperate_on_domain <- function(dom) {
 
     # Extract sub-sequences for the specific sequence and the specific domain
     seqacc <- as.character(seq_of_coords_df[1,"seqacc"])
-    aa_subset <- AAStringSet(Views(aa_set[[c(seqacc)]],
+
+    seq_aastr <- aa_set[[c(seqacc)]]
+    aa_subset <- AAStringSet(Views(seq_aastr,
         start=seq_of_coords_df[,"start"],
         end=seq_of_coords_df[,"end"]))
 
