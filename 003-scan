@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Scan domains with HMMR 3
+hmmscan-3.0 --domtblout found-domains.tab Pfam-A.hmm  my.fasta

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Example Sequence(s)
+#
+# Here I have 42 but 1 will also work.
+# Also my example is an MSA but it does not have to be -
+# any set of unaligned sequences will work.
+wget http://biocluster.ucr.edu/~alevchuk/finding-the-sequence-of-a-domain/my.fasta
+
+# Latest Pfam A
+wget ftp://ftp.sanger.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+gzip -d Pfam-A.hmm.gz
