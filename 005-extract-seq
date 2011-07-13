@@ -12,7 +12,9 @@ coords_file_name <- paste(fasta_file_name, "-found-domains.tab-extract.tab",
 
 
 # Load data
-aa_set <- read.AAStringSet(fasta_file_name, "fasta")
+aa_set <- read.AAStringSet(fasta_file_name)
+names(aa_set) <- unlist(Map(function(x){x[[1]]},
+  strsplit(names(aa_set), " "))) # Extract accessions from FASTA headers!
 coords <- read.table(coords_file_name)
 names(coords) <- c("domname", "domacc", "seqacc", "start", "end")
 
