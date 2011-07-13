@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Prepare an HMM database for faster hmmscan searches
+hmmpress Pfam-A.hmm
