@@ -1,0 +1,70 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+Globin               PF00042.1    108 MYG_SHEEP            -            153   1.8e-20   72.9   1.7   1   1   4.3e-24   2.7e-20   72.4   1.2     1   107     6   111     6   112 0.95 Globin
+Flg_hook             PF02120.10    85 MYG_SHEEP            -            153     0.039   13.3   0.0   1   1   1.3e-05     0.083   12.3   0.0    19    54     9    44     3    48 0.89 Flagellar hook-length control protein FliK
+Globin               PF00042.1    108 MYG_BOVIN            -            153   1.7e-20   73.0   1.7   1   1   4.3e-24   2.7e-20   72.4   1.2     1   107     6   111     6   112 0.95 Globin
+Flg_hook             PF02120.10    85 MYG_BOVIN            -            153     0.023   14.0   0.1   1   2   1.3e-05     0.083   12.3   0.0    19    54     9    44     3    48 0.89 Flagellar hook-length control protein FliK
+Flg_hook             PF02120.10    85 MYG_BOVIN            -            153     0.023   14.0   0.1   2   2      0.31   1.9e+03   -1.7   0.1    48    67   126   145   125   149 0.79 Flagellar hook-length control protein FliK
+Globin               PF00042.1    108 MYG_ORNAN            -            153   2.8e-22   78.8   0.8   1   2   3.7e-26   4.5e-22   78.1   0.3     1   106     6   110     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_ORNAN            -            153   2.8e-22   78.8   0.8   2   2      0.29   3.5e+03   -2.0   0.0    63    80   128   143   113   150 0.52 Globin
+Globin               PF00042.1    108 1MBD                 -            153   1.7e-20   73.0   1.7   1   1   2.3e-24   2.8e-20   72.3   1.2     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_LAGMA            -            153   5.7e-20   71.3   0.2   1   1   7.8e-24   9.6e-20   70.6   0.1     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_PAPAN            -            153   6.7e-21   74.3   0.3   1   1   9.1e-25   1.1e-20   73.6   0.2     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_TUPGL            -            153   7.8e-21   74.1   0.7   1   1   1.1e-24   1.3e-20   73.4   0.5     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_ORYAF            -            153   1.6e-20   73.1   0.2   1   1   2.2e-24   2.7e-20   72.4   0.1     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_MOUSE            -            153   4.4e-20   71.7   0.2   1   1   5.6e-24   6.9e-20   71.1   0.1     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_CALJA            -            153   5.3e-20   71.4   0.6   1   1   7.2e-24   8.8e-20   70.7   0.4     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_CTEGU            -            153   3.5e-21   75.2   0.4   1   1   9.1e-25   5.6e-21   74.6   0.3     1   107     6   111     6   112 0.96 Globin
+DUF3208              PF11482.2    108 MYG_CTEGU            -            153     0.089   12.6   0.0   1   2   3.7e-05      0.23   11.3   0.0    48    92    34    78    27    85 0.92 Protein of unknown function (DUF3208)
+DUF3208              PF11482.2    108 MYG_CTEGU            -            153     0.089   12.6   0.0   2   2      0.56   3.4e+03   -2.1   0.0    83    95   108   120   100   138 0.64 Protein of unknown function (DUF3208)
+Globin               PF00042.1    108 MYG_KOGSI            -            153   6.1e-21   74.4   2.9   1   2   5.2e-25   6.4e-21   74.4   1.5     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_KOGSI            -            153   6.1e-21   74.4   2.9   2   2      0.48   5.9e+03   -2.7   0.0    64    86   129   149   116   151 0.63 Globin
+Globin               PF00042.1    108 MYG_MACRU            -            153   2.9e-20   72.3   0.7   1   1   1.2e-23   4.9e-20   71.6   0.5     1   102     6   106     6   112 0.91 Globin
+TPR_2                PF07719.11    34 MYG_MACRU            -            153     0.032   13.8   0.1   1   2     0.026   1.1e+02    2.8   0.0     3    18    68    83    66    84 0.87 Tetratricopeptide repeat
+TPR_2                PF07719.11    34 MYG_MACRU            -            153     0.032   13.8   0.1   2   2   0.00035       1.4    8.7   0.1    14    33   120   140   117   141 0.88 Tetratricopeptide repeat
+CBFD_NFYB_HMF        PF00808.17    65 MYG_MACRU            -            153     0.073   12.8   0.1   1   1   3.2e-05      0.13   12.0   0.1     8    43   111   145   104   149 0.90 Histone-like transcription factor (CBF/NF-Y) and archaeal histone
+Globin               PF00042.1    108 MYG_MELME            -            153   2.3e-20   72.6   0.5   1   1   3.2e-24   3.9e-20   71.9   0.3     1   107     6   111     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_INIGE            -            153   4.2e-20   71.7   0.7   1   1   5.8e-24   7.1e-20   71.0   0.5     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_CANFA            -            153   2.9e-21   75.5   0.5   1   1   4.1e-25   5.1e-21   74.7   0.3     2   107     7   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_GRAGE            -            153   7.9e-22   77.3   0.2   1   1   9.3e-26   1.1e-21   76.8   0.1     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_PROGU            -            153   5.2e-20   71.5   0.3   1   1   1.4e-23   8.3e-20   70.8   0.2     1   107     6   111     6   112 0.96 Globin
+DUF3208              PF11482.2    108 MYG_PROGU            -            153      0.12   12.2   0.0   1   1   3.7e-05      0.23   11.3   0.0    48    93    34    79    26    86 0.91 Protein of unknown function (DUF3208)
+Globin               PF00042.1    108 MYG_OCHPR            -            153   1.5e-22   79.6   0.7   1   2   1.7e-26   2.1e-22   79.2   0.2     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_OCHPR            -            153   1.5e-22   79.6   0.7   2   2      0.65     8e+03   -3.1   0.0    65    86   130   149   123   150 0.62 Globin
+Globin               PF00042.1    108 MYG_PONPY            -            153     2e-20   72.8   0.5   1   1   2.6e-24   3.2e-20   72.2   0.3     1   106     6   110     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_TACAC            -            153   5.7e-21   74.5   2.5   1   1   5.1e-25   6.3e-21   74.4   1.1     1   106     6   110     6   112 0.93 Globin
+Globin               PF00042.1    108 MYG_VARVA            -            153   2.3e-22   79.0   0.2   1   1   5.5e-26   3.4e-22   78.5   0.2     1   107     6   111     6   112 0.96 Globin
+DUF294_C             PF10335.3    145 MYG_VARVA            -            153     0.029   13.7   0.1   1   1     8e-06     0.049   13.0   0.0     6    53    31    76    26    84 0.89 Putative nucleotidyltransferase substrate binding domain
+Globin               PF00042.1    108 MYG_PHOPH            -            153   5.6e-20   71.3   0.7   1   1   7.5e-24   9.2e-20   70.7   0.5     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 1LHS                 -            153   1.2e-21   76.7   0.3   1   1   1.5e-25   1.9e-21   76.1   0.2     2   107     7   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_PANTR            -            153   5.1e-21   74.7   0.3   1   1   6.4e-25   7.9e-21   74.1   0.2     1   107     6   111     6   112 0.97 Globin
+Globin               PF00042.1    108 MYG_ORCOR            -            153   9.7e-21   73.8   0.8   1   1   1.4e-24   1.7e-20   73.0   0.6     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_CHICK            -            153   1.3e-21   76.6   0.3   1   1   1.7e-25   2.1e-21   75.9   0.2     2   107     7   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_ZALCA            -            153   6.6e-21   74.3   0.5   1   1   8.7e-25   1.1e-20   73.7   0.3     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_ALLMI            -            153   2.1e-22   79.2   1.6   1   1   7.4e-26     3e-22   78.7   1.1     1   107     6   111     6   112 0.96 Globin
+DUF551               PF04448.6     69 MYG_ALLMI            -            153     0.081   13.4   0.0   1   1   3.6e-05      0.15   12.5   0.0     2    48    14    56    13    84 0.66 Protein of unknown function (DUF551)
+KMP11                PF03037.10    90 MYG_ALLMI            -            153      0.44   10.9   7.0   1   2     3e-05      0.12   12.6   2.6    41    86    36    81    27    84 0.92 Kinetoplastid membrane protein 11
+KMP11                PF03037.10    90 MYG_ALLMI            -            153      0.44   10.9   7.0   2   2       1.1   4.7e+03   -2.0   0.0    76    76   133   133   102   149 0.53 Kinetoplastid membrane protein 11
+Globin               PF00042.1    108 MYG_SAISC            -            153   2.5e-21   75.7   0.3   1   1   3.3e-25   4.1e-21   75.0   0.2     1   108     6   112     6   112 0.97 Globin
+Globin               PF00042.1    108 MYG_ZIPCA            -            153   1.7e-19   69.8   1.4   1   2   1.4e-23   1.7e-19   69.8   1.0     1   106     6   110     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_ZIPCA            -            153   1.7e-19   69.8   1.4   2   2      0.56   6.9e+03   -2.9   0.0    65    85   130   148   118   150 0.57 Globin
+Globin               PF00042.1    108 MYG_ROUAE            -            153   2.5e-21   75.7   0.6   1   2   2.9e-25   3.6e-21   75.2   0.3     1   107     6   111     6   112 0.96 Globin
+Globin               PF00042.1    108 MYG_ROUAE            -            153   2.5e-21   75.7   0.6   2   2       0.7   8.6e+03   -3.2   0.0    65    86   130   149   123   150 0.65 Globin
+Globin               PF00042.1    108 MYG_HORSE            -            153   2.9e-19   69.1   0.7   1   1   3.8e-23   4.6e-19   68.4   0.5     2   106     7   110     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_CASFI            -            153   7.3e-20   71.0   1.1   1   1   9.1e-24   1.1e-19   70.4   0.7     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_BALPH            -            153   1.7e-19   69.8   1.1   1   2   1.4e-23   1.7e-19   69.8   0.8     1   106     6   110     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_BALPH            -            153   1.7e-19   69.8   1.1   2   2      0.49     6e+03   -2.7   0.0    64    85   129   148   116   150 0.55 Globin
+Globin               PF00042.1    108 MYG_SPAEH            -            153   1.1e-20   73.6   0.4   1   1   1.5e-24   1.8e-20   72.9   0.3     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_DIDMA            -            153   1.2e-21   76.8   1.2   1   2   1.6e-25   1.9e-21   76.1   0.6     1   106     6   110     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_DIDMA            -            153   1.2e-21   76.8   1.2   2   2      0.37   4.5e+03   -2.3   0.0    64    86   129   149   117   150 0.68 Globin
+Globin               PF00042.1    108 MYG_LUTLU            -            153   6.1e-21   74.5   0.4   1   1   7.1e-25   8.7e-21   74.0   0.3     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_LAGLA            -            153   1.6e-20   73.1   0.3   1   1   2.2e-24   2.7e-20   72.4   0.2     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_APTFO            -            152     4e-18   65.4   0.7   1   2   1.3e-21   5.2e-18   65.0   0.1     2   107     7   110     6   111 0.93 Globin
+Globin               PF00042.1    108 MYG_APTFO            -            152     4e-18   65.4   0.7   2   2       1.5     6e+03   -2.7   0.0    68    68   128   128   114   147 0.52 Globin
+Kinesin              PF00225.17   333 MYG_APTFO            -            152     0.025   13.0   0.1   1   2      0.24   9.8e+02   -2.1   0.0    90   117    12    39    11    47 0.80 Kinesin motor domain
+Kinesin              PF00225.17   333 MYG_APTFO            -            152     0.025   13.0   0.1   2   2   1.2e-05      0.05   12.0   0.0    91   147    55   127    50   146 0.80 Kinesin motor domain
+CBFD_NFYB_HMF        PF00808.17    65 MYG_APTFO            -            152     0.067   12.9   0.4   1   1   3.1e-05      0.12   12.1   0.3    11    43   110   144   105   148 0.81 Histone-like transcription factor (CBF/NF-Y) and archaeal histone
+Globin               PF00042.1    108 MYG_ELEMA            -            153   1.9e-18   66.4   0.2   1   1   2.7e-22   3.4e-18   65.6   0.1     1   106     6   110     6   112 0.94 Globin
+Globin               PF00042.1    108 MYG_ONDZI            -            153   1.4e-20   73.3   1.3   1   2   1.6e-24   1.9e-20   72.8   0.5     1   107     6   111     6   112 0.95 Globin
+Globin               PF00042.1    108 MYG_ONDZI            -            153   1.4e-20   73.3   1.3   2   2      0.34   4.1e+03   -2.2   0.0    58    86   123   149   114   150 0.64 Globin
