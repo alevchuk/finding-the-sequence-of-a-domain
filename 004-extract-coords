@@ -6,15 +6,38 @@ set -u
 # Takes 1 argument - the found domains tab file
 found_domains=$1                                    
 
+
+# The input file is the HMMER3 domain hits table in Tabular format
+# It's described on the HMMER manual
+#  http://hmmer.janelia.org/software > User's Guide PDF
+#  In the PDF go to section 5 Tabular output formats > The domain hits table
+
+# """
+# (column 18) from (ali coord): The start of the MEA alignment of
+# this domain with respect to the sequence, numbered 1..L for a 
+# sequence of L residues.
+#
+#(column 20) from (env coord): The start of the domain envelope on the
+# sequence, numbered 1..L for a sequence of L residues. The envelope defines
+# a subsequence for which their is substantial probability mass supporting
+# a homologous domain, whether or not a single discrete alignment can be
+# identified.
+# The envelope may extend beyond the endpoints of the MEA alignment, and 
+# in fact often does, for weakly scoring domains.
+# """
+
+
 # Extract the start and stop position from found-domains.tab
 # Result columns: 
-#    Domain Name,
-#    Domain Accession, 
-#    Sequence Accession,
-#    Start Position (ali coord from)
-#    Stop Position (ali coord to)
+#    Domain Name (column 1),
+#    Domain Accession (column 2), 
+#    Sequence Accession (column 4),
+#    NOT --(Start Position (ali coord - column 18))--
+#    NOT --(Stop Position (ali coord - column 19))--
+#    Start Position (env coord from - column 20)
+#    Stop Position (env coord to - column 21)
 cat $found_domains | grep -v "^#" | \
-sed 's/  */\t/g'  | cut -f 1,2,4,18,19 > $found_domains-extract.tab
+sed 's/  */\t/g'  | cut -f 1,2,4,20,21 > $found_domains-extract.tab
 
 # In addtion to saving the file, print it out
 cat $found_domains-extract.tab
