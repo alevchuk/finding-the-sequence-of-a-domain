@@ -5,6 +5,11 @@ set -u
 
 # Takes 1 argument - the input FASTA file
 fasta_in=$1
+pfam_id=$2
 
 # Scan domains with HMMR 3
-hmmscan-3.0 --domtblout $fasta_in-found-domains.tab Pfam-A.hmm  $fasta_in
+hmmfetch Pfam-A.hmm $pfam_id > $pfam_id.hmm
+hmmsearch --domtblout $fasta_in.$pfam_id.scan.tab $pfam_id.hmm  $fasta_in &> $fasta_in.$pfam_id.scan
+
+# In addtion to saving the file, print it out
+cat $fasta_in.$pfam_id.scan
