@@ -1,63 +1,30 @@
-#!/usr/bin/env Rscript
+#!/bin/bash
 
-cat("--------- Loading Biostrings --------------\n")
-library(Biostrings)
-cat("--------- Loading Biostrings done ---------\n")
+# Fail on unbound variables. E.g. when arguents are not given
+set -u
 
-# Parse arguments
-script_args <- commandArgs(trailingOnly=T)
-fasta_file_name <- script_args[[1]]
-coords_file_name <- paste(fasta_file_name, "-found-domains.tab-extract.tab",
-                          sep="")
+# Takes 1 argument - the found domains tab file
+fasta_in=$1                                    
+basename=$(basename -s .extract $fasta_in*.extract)
 
+# Use the extract the start and stop position from found-domains.tab
+# Result columns: 
+#    Domain Name (column 1),
+#    Domain Accession (column 2), 
+#    Sequence Accession (column 3),
+#    Start Position (env coord from - column 4)
+#    Stop Position (env coord to - column 5)
 
-# Load data
-aa_set <- read.AAStringSet(fasta_file_name)
-names(aa_set) <- unlist(Map(function(x){x[[1]]},
-  strsplit(names(aa_set), " "))) # Extract accessions from FASTA headers!
-coords <- read.table(coords_file_name)
-names(coords) <- c("domname", "domacc", "seqacc", "start", "end")
+# make directory for the results
+mkdir -p ./results
 
-# Create optuput directory
-dir.create("results", showWarnings=F)
+# make a blastdb from the input fasta
+makeblastdb -in $fasta_in -parse_seqids -dbtype prot
 
-# Operate over each domain
-opperate_on_domain <- function(dom) {
-  dom_coords_df <- coords[coords$domname == dom,]
+# make a blastdb from the input fasta
 
-  extract_domain_sequences <- function(seqid_of_dom) { 
-    seq_of_coords_df <- dom_coords_df[dom_coords_df$seqacc == seqid_of_dom,]
+awk '{OFS="\t"}{print $1,$4"-"$5}' $fasta_in*.extract > range.txt
 
-    # Extract sub-sequences for the specific sequence and the specific domain
-    seqacc <- as.character(seq_of_coords_df[1,"seqacc"])
+blastdbcmd -db $fasta_in -entry_batch range.txt -outfmt "%f" -out ./results/$basename.extracted-seq.fa
 
-    seq_aastr <- aa_set[[c(seqacc)]]
-    aa_subset <- AAStringSet(Views(seq_aastr,
-        start=seq_of_coords_df[,"start"],
-        end=seq_of_coords_df[,"end"]))
-
-    # Put together the headers for the output FASTA file
-    names(aa_subset) <- paste(
-      seq_of_coords_df[,"seqacc"],
-      seq_of_coords_df[,"domname"],
-      seq_of_coords_df[,"domacc"],
-      paste(seq_of_coords_df[,"start"], seq_of_coords_df[,"end"], sep=","),
-      sep="|"
-    )
-
-    aa_subset
-  }
-
-  aa_subsets <- Map(extract_domain_sequences, unique(dom_coords_df$seqacc))
-
-  # Combine multiple AAStringSets into one
-  aa_subsets <- Reduce(function(x,y){c(x,y)}, aa_subsets)
-
-  out_file_name <- paste("results/", dom, ".fasta", sep="")
-  write.XStringSet(aa_subsets, file=out_file_name)
-
-  cat(paste(out_file_name, "done\n"))
-}
-
-domains <- unique(coords$domname)
-invisible(Map(opperate_on_domain, domains))
+rm range.txt

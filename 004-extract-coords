@@ -4,8 +4,8 @@
 set -u
 
 # Takes 1 argument - the found domains tab file
-found_domains=$1                                    
-
+scan_tab=$1                                    
+basename=$(basename -s .scan.tab $scan_tab)
 
 # The input file is the HMMER3 domain hits table in Tabular format
 # It's described on the HMMER manual
@@ -36,8 +36,8 @@ found_domains=$1
 #    NOT --(Stop Position (ali coord - column 19))--
 #    Start Position (env coord from - column 20)
 #    Stop Position (env coord to - column 21)
-cat $found_domains | grep -v "^#" | \
-sed 's/  */\t/g'  | cut -f 1,2,4,20,21 > $found_domains-extract.tab
+cat $scan_tab | grep -v "^#" | \
+sed 's/  */\t/g'  | cut -f 1,2,4,20,21 > ./$basename.extract
 
 # In addtion to saving the file, print it out
-cat $found_domains-extract.tab
+cat $basename.extract
